@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+Backend Javascript Developer Exercise
+=====================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This exercise is designed to assess your skills and to see how you solve problems. Please don't spend more than 3 hours working on it, and if you have trouble completing it in that time, don't stress about it - just push up whatever you have.  There is no right answer here, and work-in-progress code is fine, as long as you can explain what you were working on during the interview.
 
-## Available Scripts
+We're expecting that many of you will not have worked with Cypress before - that's fine. You will probably want to start with [the docs](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html), or see [the examples](./cypress/integration/examples).
 
-In the project directory, you can run:
+Thanks, and good luck!
 
-### `npm start`
+Instructions
+------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Read "The Exercise" below.
+2. Clone this repository down locally, and perform the exercise.
+3. Push your work up to a new, private repository in your own Github account.
+4. At some point before your interview, give the Github user [`lastcall-automation`](https://github.com/lastcall-automation) read access to your repository.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Exercise
+------------
 
-### `npm test`
+Last Call Media's [website](https://lastcallmedia.com) breaks every time we push code to it!  We want your help to add some tests to help us automate some basic quality control tests. What's breaking is:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* The "More Entries" button on https://lastcallmedia.com/blog sometimes fails to load additional blog posts onto the page when it is clicked. We would like to verify that the "More Entries" button loads additional posts onto the page when it is clicked.
+* The contact form on https://lastcallmedia.com/contact sometimes allows users to submit the contact form without filling out the CAPTCHA. We would like to verify that the form **cannot** be submitted without solving the CAPTCHA (note: no need to actually perform a successful submission here ;)).
 
-### `npm run build`
+Stretch goal:
+* Google Analytics sometimes fails to capture the pageview event when visitors use our site. We would lke to verify that the event is being sent.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We've heard a lot about this really great tool called [Cypress](https://www.cypress.io/), and we'd like you to use it to help us develop these tests. We've created this repository to help you get started. Please write some Cypress tests for us. The tests will be run from our local machines, and should target the production site (https://lastcallmedia.com).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get started, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm install
+npm run cypress:open
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
