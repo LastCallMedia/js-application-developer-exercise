@@ -25,17 +25,14 @@ Last Call Media's [website](https://lastcallmedia.com) wants to change it's back
   type: "ext"
 }
 ```
-* In `App.css` you'll find useful styles you can use to center the background media and the select field.
+* In `App.css` you'll find useful styles you can use to center the background media and the select field.The styles provided are targetting the latest version of Chrome browser.
 * Videos should automatically play in a loop when selected, but should be muted.
-* Selecting a different value in a select field should immediately change the background below.
+* Selecting a different value in a select field should immediately change the background.
 
 Stretch goal:
 * Try switching backgrounds without the flickering of loading in the next one we selected.
 
-We've heard a lot about this really great tool called [Cypress](https://www.cypress.io/), and we'd like you to use it to help us develop these tests. We've created this repository to help you get started. Please write some Cypress tests for us. The tests will be run from our local machines, and should target the production site (https://lastcallmedia.com).
-
 To get started, run:
-
 ```
 npm install
 npm start
